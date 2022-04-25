@@ -13,7 +13,7 @@ class UserService(private val userRepository: UserRepository) {
     val argon2: Argon2 = Argon2Factory.create()
 
     fun checkUser(loginRequest: LoginRequest): UserModel {
-        userRepository.getUser(loginRequest.login)?.let {
+        userRepository.getUser(loginRequest.email)?.let {
             val requestPassword = loginRequest.password
             val userHashedPassword = it.password
             if (argon2.verify(userHashedPassword, requestPassword.toCharArray())) return it
