@@ -1,0 +1,13 @@
+package it.sevenbits.authsample
+
+import org.junit.jupiter.api.Test
+import org.springframework.boot.test.context.SpringBootTest
+
+@SpringBootTest
+class AuthsampleApplicationTests {
+
+	@Test
+	fun contextLoads() {
+	}
+
+}

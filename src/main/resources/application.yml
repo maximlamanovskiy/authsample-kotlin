@@ -1,0 +1,7 @@
+server:
+  port: 8080
+
+jwt:
+  issuer: 'maxim.lamanovsky@7bits.it'
+  key: 'safe-enough'
+  tokenTtl: 60
