@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
 @RestController
-@RequestMapping("/login")
+@RequestMapping("/signin")
 class LoginController(private val userService: UserService, private val jwtService: JwtService) {
 
     @PostMapping
