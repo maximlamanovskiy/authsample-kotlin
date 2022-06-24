@@ -13,6 +13,7 @@ class CorsConfiguration {
             registry.addMapping("/**")
                 .allowedOrigins("http://localhost:3000")
                 .allowedMethods("GET", "POST")
+                .allowedHeaders("Origin", "Accept", "Content-Type", "Authorization")
                 .allowCredentials(false)
                 .maxAge(3600)
         }

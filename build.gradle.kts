@@ -9,7 +9,7 @@ plugins {
 
 group = "it.sevenbits"
 version = "0.0.1-SNAPSHOT"
-java.sourceCompatibility = JavaVersion.VERSION_17
+java.sourceCompatibility = JavaVersion.VERSION_11
 
 repositories {
 	mavenCentral()
@@ -20,6 +20,7 @@ dependencies {
 	runtimeOnly("org.jetbrains.kotlin:kotlin-reflect:1.6.21")
 
 	implementation("org.springframework.boot:spring-boot-starter-web:2.6.7")
+	implementation("org.springframework.boot:spring-boot-starter-websocket:2.6.7")
 	implementation("de.mkammerer:argon2-jvm:2.11")
 	implementation("com.auth0:java-jwt:3.19.1")
 
@@ -29,7 +30,7 @@ dependencies {
 tasks.withType<KotlinCompile> {
 	kotlinOptions {
 		freeCompilerArgs = listOf("-Xjsr305=strict")
-		jvmTarget = "17"
+		jvmTarget = "11"
 	}
 }
 
